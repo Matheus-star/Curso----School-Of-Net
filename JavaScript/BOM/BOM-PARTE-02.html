@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>BOM - PARTE - 02  Métodos</title>
+</head>
+<body>
+    <script>
+        open // Abre uma janela veja o exemplo abaixo
+            window.open('http:www.google.com', 'nome da janela', /*Esse parametro abre outra Janela*/'widht=600,height=300'); // ele abre em uma nova guia.
+            window.close() //Ele fecha janela apenas que foi aberta com o open, caso contrário não.
+            window.opener // ele é uma referencia de quem chamou a mudança de página, no nosso caso ele irá apresentar o comando feito acima.
+        
+            window.scrollTo(/*O primeiro parâmetro é para scrolar horizontal*/0, /*O segundo é verticalmente*/50); // Ele só vai scrolar 1 ves com esse valor.
+            window.scrollBy(0,50) // adiferença é que ele soma com o parametro já colocado, então pode se passar ele mais de uma vez.
+        print() // Ele vai imprimir a página em pdf 
+    </script>
+</body>
+</html>

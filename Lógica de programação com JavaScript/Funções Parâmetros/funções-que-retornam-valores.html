@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<body>
+   
+    <button onclick="mostrar()"> Mostrar área </button>
+    <button onclick="areaoutput()"> Mostrar área </button>
+    <div id="output"></div>
+    <script>
+       let altura = parseFloat(prompt('digite a altura'));
+       let largura = parseFloat(prompt('digite a largura'));
+
+        function mostrar(){
+            let area = soma(altura,largura);
+
+            alert('Há área ' + area);
+
+        }
+        function areaoutput(){
+            
+            let area = soma(altura,largura);
+
+            document.querySelector('#output').innerHTML = 'Há área ' + area;
+
+        }
+       function soma(l,a){
+           return l * a;
+       }
+   </script>
+</body>
+</html>

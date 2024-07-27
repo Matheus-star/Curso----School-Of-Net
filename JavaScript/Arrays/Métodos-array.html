@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Métodos</title>
+</head>
+<body>
+    <script>
+       let arr = [1,10,3,4,5, 'string', 10];
+        
+        let sohNumeros = arr.every( function (el, ind, obj) {
+            console.log('elemento', el);
+            console.log('indice', ind);
+            console.log('obj', obj);
+            return true
+        })
+
+        let verificaTodos = arr.every( function (el, ind, obj) {
+            return typeof el === 'number'; // se aver 1 errado ele irá retornar false.
+        })
+        console.log(verificaTodos);
+
+        let verificaAlguns =  arr.some( function (el, ind, obj) {
+            return typeof el === 'number'; // verifica apenas oq estão corrretos.
+        })
+        console.log(verificaAlguns);
+
+        let filtraResultado = arr.filter ( function (el, ind, obj) {
+            return typeof el === 'number';
+        })
+        console.log(filtraResultado)
+
+         let numeros = filtraResultado; // Irei utilizar essa variável no elemento map
+
+        arr.forEach ( function (el, ind, obj) {
+           console.log('Elemento = ', el,'|', 'Indice = ', ind,'|', 'Array = ', obj );
+        })
+    </script>
+
+
+     <script>
+        let posicao = arr.indexOf(10, 3); // o segundo parâmetro serve para estabelecer aonde deve começar a procura.
+        console.log ('posicao = ', posicao);
+
+        let posicao2 = arr.lastIndexOf(10, 3);
+        console.log ('posicao 02 = ', posicao2);
+
+    </script>
+
+
+    <script>
+       numeros = numeros.map(function (el, i, arr) {
+            return el * i;     
+        });
+
+       console.log('Antes  ',  filtraResultado)
+       console.log('numeros ', numeros);
+        
+    </script>
+        <!--Revisar-->
+    <script>
+        var juncao = filtraResultado.concat(numeros, 'olá'); // se passar mais parametros ele irá concatenar dentro da array.
+        // Junção de duas arrays
+        console.log('Junção = ', juncao);
+     </script>
+    <!--Transformar array em string -->
+     <script>
+         let transformarString = juncao.join('--');
+         console.log('Join ', transformarString)
+
+         let transformarString2 = numeros.toString()
+         console.log('toString ', transformarString2);
+         
+     </script>
+    
+     <script>
+         arr.push('novo', 'ultimo'); // Adiciona um novo itém no último elemento
+        console.log('Adicionado novo no ultimo elemento = ', arr);
+
+        arr.unshift('primeiro'); // Adiciona um novo itém no primeiro elemento
+         console.log('Adicionado novo no primeiro elemento = ', arr);
+        
+      </script>
+
+
+     <script>
+        let removeUltmoitem = arr.pop();
+        console.log('Normal = ' , arr );
+        console.log('Sem o Ultimo Item = ', removeUltmoitem);
+       
+        let removePrimeiroitem = arr.shift();
+        console.log('Normal = ' , arr );
+        console.log('Sem o Primeiro Item = ', removePrimeiroitem);
+     </script>
+
+    <script>
+        let somaArr = numeros.reduce(function (anterior,atual,indice) {
+            console.log('Anterior = ', anterior, ' | ',  'atual = ', atual , '|',  'Indice = ', indice);
+           return anterior + atual + indice;
+           
+       },1); // Estabelece um valor anterior. 
+         console.log([1,2,3].reverse);
+
+         
+    
+       arr2 = arr.splice(2,0, 'Adicionando', 'novo'); 
+       // Primero parametro estabele onde a partir de qual deve-se começar a manipular,
+       // o segundo parametro estabelece quantos arrays devesse ser Excluido.
+       // O terceiro parametro em diante adiciona nos arrays a partir da onde você estabeleceu para manipular.
+      
+    console.log('Quandos Arrays Foram excluido= ', arr2 );
+   
+    
+
+    </script>
+</body>
+</html>

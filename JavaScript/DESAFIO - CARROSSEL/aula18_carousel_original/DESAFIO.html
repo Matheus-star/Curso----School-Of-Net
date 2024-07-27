@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript Completo</title>
+        <meta charset="utf-8">
+        
+        <link href="carousel.css" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        <main class="content">
+
+            <h1>Javascript Completo</h1>
+
+            <section class="carousel">
+              <div class="carousel__inner">
+                <div class="carousel__item"> <a href=""><img src="images/01.jpg" alt=""></a></div>
+                <div class="carousel__item"> <a href=""><img src="images/02.jpg" alt=""></a></div>
+                <div class="carousel__item"> <a href=""><img src="images/03.jpg" alt=""></a></div>
+                <div class="carousel__item"> <a href=""><img src="images/04.jpg" alt=""></a></div>
+              </div>
+              
+              <button class="carousel__btn carousel__btn--prev"> &lt; </button>
+              <button class="carousel__btn carousel__btn--next"> &gt; </button>
+              
+              <ul class="carousel__paginacao"></ul>
+            </section>
+
+        </main>
+        
+        <script>
+        
+            (function(){ 
+                'use strict';
+                let $buttonNext = document.querySelector(".carousel__btn--next");
+                let $buttonPrev = document.querySelector(".carousel__btn--prev");
+                
+                let $carrossel = document.querySelector('.carosel');
+                let $carrosselInner = document.querySelector('.carousel__inner');
+                let $carrosselItens = document.querySelectorAll('.carousel__item'); // Coleção
+        
+                let bannerAtual = 0;
+                let qtdBanners = $carrosselItens.length;
+
+                console.log(qtdBanners);
+                
+
+
+                $buttonNext.style.display = 'block';
+                $buttonPrev.style.display = 'block';
+
+               // $carrossel.style.overflowX = 'hidden';
+
+                $buttonNext.addEventListener('click', funcNext);
+                $buttonPrev.addEventListener('click', funcPrev);
+
+                function funcNext(){
+                    bannerAtual++;
+                    mostraBanner(bannerAtual);
+                } 
+                function funcPrev(){
+                    bannerAtual--;
+                    mostraBanner(bannerAtual);
+                }
+
+                function mostraBanner(bannerAtual) { 
+                  let largura = getComputedStyle($carrosselItens[0]).width;
+                    largura = parseInt(largura);
+                    if(bannerAtual > 0){
+
+                        $buttonPrev.disabled = false;
+                    }else{
+
+                        $buttonPrev.disabled = true;
+                    }
+                    if (bannerAtual === qtdBanners -1) {
+                        
+                      $buttonNext.disabled = true;  
+                    }else{
+
+                        $buttonNext.disabled = false;
+                    }
+
+
+                    let novaPosicao = largura * bannerAtual * -1;
+                   $carrosselInner.style.transform = 'translateX('+ novaPosicao + 'px)';
+
+                 
+                 console.log(novaPosicao, typeof novaPosicao);
+                }
+             
+
+            })()
+        
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+        
+        <style type="text/css">
+        body{
+            padding-top: 150px;
+        }
+		.menu{
+			height: 150px;
+			background: red;
+			width: 100%;
+			transition: all 1s;
+			position: fixed;
+			top: 0;
+			left: 0;
+			opacity: .6;
+		}		
+		.fx .menu{
+			height: 50px;
+			opacity: 1;
+		}
+
+	</style>
+        
+    </head>
+    <body>
+       
+       <div class="menu"></div>
+       
+       
+        <h1>Javascript é FODA</h1>
+        
+        <h2>Desafio Bom</h2>
+
+        <p>Mudar a configuração do menu principal se a página tiver um scroll maior do que a altura do proprio menu</p>
+
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsa. Repellendus suscipit aliquam amet deserunt similique minus quia, ipsum sit nulla sapiente corrupti hic alias, atque commodi libero, sed sint!</p>
+        
+        <script>
+        (function(){
+            let $menu = document.querySelectorAll('.menu');
+            
+            window.addEventListener('scroll', cond);
+
+            function cond() {
+                let position = getTYscrool();
+                console.log('Posição: ',position);
+
+                if (position >  100 && !hasClasfx()) {
+                    document.body.classList.add('fx');
+                    console.log('Adiciona');
+                    
+                } 
+                if (position <= 100 && hasClasfx()){
+                    document.body.classList.remove('fx');
+                    console.log('Remove');
+                    
+                }
+            }
+            function getTYscrool(){
+                return window.pageYOffset;
+            }
+            function hasClasfx() {
+                return !!document.querySelector('.fx');
+            }
+         
+        
+        })()
+        </script>
+        
+  
+        
+    </body>
+</html>

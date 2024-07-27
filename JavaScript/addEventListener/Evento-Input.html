@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript</h1>
+       
+        <textarea  id="msg" cols="50" rows="10" maxlength=100 ></textarea>
+        <br><br>
+        Restam <span id="resta"></span> caracteres
+    
+        <script>
+            
+
+                let $txtMsg = document.getElementById('msg');
+                let $resta = document.getElementById('resta');
+                
+
+                let maxima = $txtMsg.maxLength;
+                
+            
+                $resta.textContent = maxima;
+
+                $txtMsg.addEventListener('input', checkLength);
+
+                function checkLength(e){
+                    
+                    let numeroLetras = this.value.length;
+                    
+                    $resta.textContent = maxima - numeroLetras;
+                }
+         
+        </script>
+    </div>
+</body>
+</html>

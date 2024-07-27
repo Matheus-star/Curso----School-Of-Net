@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>BOM - PARTE - 01</title>
+</head>
+<body>
+    <script>
+    innerHeight // Mostra a altura interna do browser
+    innerWidth // Mostra a largura interna do browser
+    
+    outerHeight // Mostra a altura externa do browser
+    outerWidth // Mostra a largura externa do browser
+    
+    pageXOffset // Ele marca o tanto de escronagem feita. Simplificando, é o tanto de ultilizado da barra de rolagem, mas só na vertical
+    pageYOffset // Ele marca o tanto de escronagem feita. Simplificando, é o tanto de ultilizado da barra de rolagem, mas só na orizontal
+
+    // os dois tem valores aproximados.
+        screenX // Posição da minha janela em relação ao monitor 
+        screenY // Posição da minha janela em relação ao monitor
+       
+    history // Mostra o historico de busca.
+        history.length // Mostra a quantidade de paginas entrada
+        history.go(-1) // esse exemplo mostra no caso em que se pesquisou duas vez e com esse comando você vouta a pagina que estava antes. Ele também faz o inverso que é avançar
+        history.back() // Atalho para voltar.
+        history.forward() // atalho  para avançar.
+
+    location // O objeto location mostra a url da página.
+        // As propriedades são.
+        location.href // Mostra a url
+        location.protocol // mostra o http 
+        location.hash //nome do site
+        location.search // Mostra as informações passada na url
+        location.reload // da um reflexe na página
+
+        location.assign('') //Ele navega para outra pagina, apenas passando uma url no parametro dele.
+        location.replace('') // Ele faz quase o mesmo que o assign, a diferença é que ele subistitui a página, então não aparece no History.lenght que foi mudado de página.
+
+    navigator // O objeto Navigator da da dica sobre a pagina, os plugins disponiveis, os types aceitos
+        navigator.userAgent //Mostra de onde está chegando a requisição para sua página.
+        navigator.plugins // Mostra plugins habilitados
+        navigator.cookieEnabled // Mostra se os Cookies estão habilitados.
+        navigator.platform // Mostra a plataforma
+
+    screen // O objeto Screen é referente a tela do usúario, independente do navegador
+        // Mostra o tamanho disponivel de resolução
+        screen.availHeight
+        screen.availWidth
+        // Mostra o tamanho da resolução
+        screen.height
+        screen.width 
+    </script>
+</body>
+</html>

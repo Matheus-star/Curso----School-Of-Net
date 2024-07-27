@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temporizadores</title>
+</head>
+
+<body>
+    <h1>Operadores apresentados abaixo não são nativos do JavaScript, só ira funcionar no browser</h1>
+    <script>
+      //  let n = 0;
+   //     setTimeout(function(){
+
+        //    console.log('n', n)
+
+        //}, 1000) // segundo parametro apresenta a teporalização até começar a function,
+                // ele é contado em miliSegundos
+
+    </script>
+    <script>
+     //   let n = 0;
+       // function somaUm() {
+
+         //   console.log('n', ++n);
+
+        //}
+        //let intervalo = setInterval(somaUm, 1000);
+
+        //console.log(intervalo);
+        
+    </script>
+    <script>
+          let n = 0;
+     function somaUm() {
+       
+        console.log('n', ++n);
+      
+        if(n > 5){
+
+        clearInterval(intervalo)
+
+        }
+      
+    }
+   setTimeout(somaUm, 1000)
+   var intervalo = setInterval(somaUm, 1000);
+
+        console.log(intervalo);
+    
+    </script>
+        <div id="div"></div>
+        <script>
+            let str = '';
+            let d = document.querySelector('div');
+            let timeoutTeste = setTimeout(function (){
+                for (var i = 0; i < 100; i++){
+                    str += "i: " + i + " -- ";
+                    d.textContent += str;
+                }
+          }, 6000);
+        </script>
+
+</body>
+</html>

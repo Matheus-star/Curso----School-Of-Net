@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<body>
+    <button onclick="mostrartabuada()">Criar Tabuada</button>
+    <button onclick="limpartabuada()">limpar Tabuada</button>
+    <div  id="output"></div>
+    <script>
+        function mostrartabuada(){
+           //Perguntar para o usuário
+           let n = prompt("Digite um numero");
+
+           limpartabuada(); // Função limpar tabuada
+           // Converter o numero
+           n = parseFloat(n);
+
+            // Criar uma variavel que servira de indice
+            let i = 1;
+            //enquanto indice <=1000
+                //concatena na variavel mensagem
+                   
+            while(i <= 1000){
+                mensagem += n +" x "+ i +" = "+ +(n*i)+"<br>";
+                i++;
+            }
+            //mostra mensagem no output
+            output.innerHTML = mensagem;
+        }
+            function limpartabuada(){
+
+            let mensagem = '';
+            output.innerHTML = mensagem;
+
+            }
+          
+            let output = document.querySelector("#output");
+            let mensagem = ''; // let é um string vazia
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <main class="cmain" id="idmain">
+            <h2>subtitulo</h2>
+            <p id="pmain" class="pmain">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        </main> 
+        
+        <section class="csection" id="idsection">
+            <h3>subtitulo</h3>
+            <p class="paragrafos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <p class="paragrafos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        </section>
+        
+        <script>
+            document.getElementById('idmain') // para puxar um ID
+            
+            //Para mudar o texto pelo ID, exemplo a baixo.
+            document.getElementById('pmain').textContent = 'texto alterado';
+
+            //Para mudar o texto pela class, exemplo a baixo.
+            document.getElementsByClassName('paragrafos')[0].textContent = 'texto alterado';
+
+            // Para puxar uma tag do mundo HTML
+            document.getElementsByTagName('p')[0];
+
+            // Para puxar apenas o primeiro P utilizamos querySelector
+            document.querySelector('p').textContent = 'eu tenho o DOM'
+
+            // O querySelectorALL Puxa Todos os P em uma coleção.
+            document.querySelectorAll('p').innerHTML
+        </script>
+        <script>
+        
+        </script>
+    </body>
+</html>

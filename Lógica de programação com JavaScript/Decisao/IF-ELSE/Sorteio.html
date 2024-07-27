@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let n1 = prompt("Jogador 1 insira um número");
+       
+        
+        let n2 = prompt("Jogador 2 insira um número");
+      
+
+        if (n1 == n2){
+
+            alert ("Empate");
+
+        } else {
+
+            let sorteio = parseInt(Math.random() * 2);
+            //quem escolheu o numero maior ganhou
+            if (sorteio == 0){
+                if (n1 > n2){
+
+                alert ("Jogador 1 ganhou");
+            
+                } 
+                else {
+
+                alert (" jogador 2 ganhou");
+                }       
+            }else{
+              //quem escolheu o numero menor ganhou
+                if (n1 < n2){
+
+                alert (" Jogador 1 ganhou");
+                } 
+                else{
+
+                alert (" jogador 2 ganhou");
+                }       
+
+            }
+
+        }
+
+       
+      
+    </script>
+</body>
+</html>

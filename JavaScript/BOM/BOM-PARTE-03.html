@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <title>BOM - PARTE - 03  Eventos</title>
+</head>
+<body>
+    <p>Em geografia, horizontal é uma linha reta imaginária cuja direção é paralela ao horizonte terrestre. 
+         Ela é perpendicular à vertical a partir do ponto de ponto de observação. Em geometria e na matemática em geral, 
+         a horizontal é usada juntamente com a vertical para a elaboração de gráficos, tabelas etc</p>
+    <p>Em geografia, horizontal é uma linha reta imaginária cuja direção é paralela ao horizonte terrestre. 
+         Ela é perpendicular à vertical a partir do ponto de ponto de observação. Em geometria e na matemática em geral, 
+         a horizontal é usada juntamente com a vertical para a elaboração de gráficos, tabelas etc</p>
+     <p>Em geografia, horizontal é uma linha reta imaginária cuja direção é paralela ao horizonte terrestre. 
+         Ela é perpendicular à vertical a partir do ponto de ponto de observação. Em geometria e na matemática em geral, 
+         a horizontal é usada juntamente com a vertical para a elaboração de gráficos, tabelas etc</p>
+
+    <script>
+
+         window.addEventListener('load', function(){ // Esse evento funciona quando a página é carrgada, mas só quando as imagens e aúdios estiverem prontas.
+            console.log('load disparado');
+         });
+
+         window.addEventListener('DOMcontentLoaded', function(){ // Esse evento funciona quando a página é carrgada, mas quando a estrutura do HTML está pronta.
+            console.log('DOMcontentLoaded disparado');
+         });
+
+        // error // Esse evento é utilizado mais em um ifreme.
+
+         window.addEventListener('resize', function(e){ // O resize é diparado ao mexer no tamanho da página.
+            console.log('resize dispara');
+            console.log(e);
+         });
+
+         window.addEventListener('scroll', function(e){ // ele dispara ao scrolar a página.
+            console.log('scroll dispara');
+            console.log(e);
+            console.log("Scroll Y", pageYOffset);
+         });
+
+         window.addEventListener('unload', function(){// é disparado quando a janela está prestes a ser fechada
+            console.log('unload disparado');          
+            debugger
+         });
+
+         window.addEventListener('beforeunload', function(){
+             console.log('dispara berfreunload'); // é disparado quando a janela está prestes a ser fechada
+             debugger
+         });
+
+    </script>
+ </body>
+</html>

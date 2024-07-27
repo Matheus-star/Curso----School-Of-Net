@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style type="text/css">
+    .menu{
+        background: red;
+    }
+    </style>
+   
+</head>
+<body>
+    <divc class="menu" style="background: green"></div>    
+
+        <h1>Javascript</h1>
+
+        <script>
+        
+        let $teste = document.querySelector('.menu');
+           console.log("BG: ", $teste.style.background);
+
+          //  console.log ('Computado ', getComputedStyle().background);
+        
+            let $paragrafo = document.querySelector('p');
+          console.log(getComputedStyle($paragrafo)); 
+
+            console.log($paragrafo.offsetHeight, $paragrafo.offsetWidth); // Eles apresentão os valores que browser utilizou para posicionar o elemento na tela.
+            console.log($paragrafo.offsetLeft, $paragrafo.offsetTop);
+
+            //Posição na viewport
+            // Ele apresenta valores relativo a posição que está no browser, no relativq posição em que foi scrolada.
+            console.log($paragrafo.getBoundingClientRect()); 
+            
+
+        </script>
+</body>
+</html>

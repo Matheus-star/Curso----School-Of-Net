@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>                                                                                            
+    <Title>Função recursiva</Title>
+</head>
+<body>
+    <script>
+        function dizBla(n) {
+            return (n > 1) ? dizBla(--n) + 'bla' : 'bla';
+        }
+
+        console.log(dizBla(2)) // bla bla             
+        console.log(dizBla(1)) // bla
+
+    </script>
+</body>
+</html> 

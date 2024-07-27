@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript</h1>
+      
+        <p>Detalhes sobre a vida de Sócrates derivam de três fontes contemporâneas: os diálogos de Platão, as peças de Aristófanes e os diálogos de Xenofonte. Não há evidência de que Sócrates tenha ele mesmo publicado alguma obra. Alguns autores defendem que ele não deixou nada escrito pois, além de na sua época a transmissão do saber ser feita, essencialmente, pela via oral, Sócrates assumia-se como alguém que sabe que nada sabe. Assim, para ele, a escrita fecharia o conhecimento, deixando-o de forma acabada, amarrando o seu autor ao estrito contexto de afirmações inamovíveis: se essas afirmações contemplam o erro, a escrita não só o perpetua como garante a sua transmissão.[4]
+
+            As obras de Aristófanes retratam Sócrates como um personagem cômico e sua representação não deve ser levada ao pé da letra.[5]
+            
+            Vida</p> 
+          <p>  Nascido nas planícies do monte Licabeto, próximo a Atenas, Sócrates vinha de família humilde.[6] Era filho de Sofronisco[7] - motivo pelo qual ele era chamado em sua juventude de Sokrates ios Sōfronískos (Sócrates, o filho de Sofronisco) -, um escultor, especialista em entalhar colunas nos templos, e Fainarete, uma parteira (ambos eram parentes de Aristides, o Justo).
+            "A Morte de Sócrates", por Jacques-Louis David (1787)
+            O julgamento e a execução de Sócrates são eventos centrais da obra de Platão (Apologia e Críton). Sócrates admitiu que poderia ter evitado sua condenação a morte, bebendo antes o veneno chamado cicuta, se tivesse desistido da vida justa. Mesmo depois de sua condenação, ele poderia ter evitado sua morte se tivesse escapado com a ajuda de amigos.
+            
+            Platão considerou que Sócrates foi condenado por questões evidentemente políticas. Por seu lado, Xenofonte atribuiu a acusação a Sócrates a um fato de ordem pessoal, pelo desejo de vingança. O propósito não era a morte de Sócrates mas sim afastá-lo de Atenas e se isso não ocorreu deveu-se à teimosia de Sócrates.[16]
+            
+            Julgamento
+            Tão logo as ideias de Sócrates foram se espalhando pela cidade, ele ganhava mais e mais discípulos.
+            
+            Assim, pensavam eles: Como um homem poderia ensinar de graça e pregar que não se precisavam de professores como eles?. E mais: Eles não concordavam com os pensamentos de Sócrates, que dizia que para se acreditar em algo, era preciso verificar se aquilo realmente era verdade.
+            
+            Logo Sócrates começou a fazer vários inimigos, assim causando uma grande intriga. Mas eis que a guerra do Peloponeso estourou, todos os homens entre 15 e 45 anos de idade foram enviados para lutar. Sócrates, pela sua habilidade de fazer as pessoas o seguirem, foi escolhido então como um dos generais.
+            
+            Ao final da guerra, com a intenção de salvar os poucos soldados que estavam vivos, Sócrates ordena que todos voltem rapidamente para Atenas, mas deixassem os mortos no campo de batalha - contrariando uma lei que obrigava o general a enterrar todos os seus soldados mortos, ou morrer tentando. Assim, ao chegar, ele é preso.
+            
+            Usando toda a sua capacidade de persuasão, Sócrates consegue convencer a todos de que era melhor deixar alguns mortos do que morrerem todos, uma vez que se todos morressem, ninguém poderia enterrá-los. Desta forma ele consegue a liberdade.
+            
+            Ficou livre por mais 30 anos, quando foi preso novamente, acusado de 3 crimes:
+            1- Não acreditar nos costumes e nos deuses gregos;
+            2- Unir-se a deuses malignos que gostam de destruir as cidades;
+            3- Corromper jovens com suas ideias;
+        </p> 
+        <p>Detalhes sobre a vida de Sócrates derivam de três fontes contemporâneas: os diálogos de Platão, as peças de Aristófanes e os diálogos de Xenofonte. Não há evidência de que Sócrates tenha ele mesmo publicado alguma obra. Alguns autores defendem que ele não deixou nada escrito pois, além de na sua época a transmissão do saber ser feita, essencialmente, pela via oral, Sócrates assumia-se como alguém que sabe que nada sabe. Assim, para ele, a escrita fecharia o conhecimento, deixando-o de forma acabada, amarrando o seu autor ao estrito contexto de afirmações inamovíveis: se essas afirmações contemplam o erro, a escrita não só o perpetua como garante a sua transmissão.[4]
+
+            As obras de Aristófanes retratam Sócrates como um personagem cômico e sua representação não deve ser levada ao pé da letra.[5]
+            
+            Vida
+        </p> 
+            <p>Detalhes sobre a vida de Sócrates derivam de três fontes contemporâneas: os diálogos de Platão, as peças de Aristófanes e os diálogos de Xenofonte. Não há evidência de que Sócrates tenha ele mesmo publicado alguma obra. Alguns autores defendem que ele não deixou nada escrito pois, além de na sua época a transmissão do saber ser feita, essencialmente, pela via oral, Sócrates assumia-se como alguém que sabe que nada sabe. Assim, para ele, a escrita fecharia o conhecimento, deixando-o de forma acabada, amarrando o seu autor ao estrito contexto de afirmações inamovíveis: se essas afirmações contemplam o erro, a escrita não só o perpetua como garante a sua transmissão.[4]
+
+            As obras de Aristófanes retratam Sócrates como um personagem cômico e sua representação não deve ser levada ao pé da letra.[5]
+            
+            Vida
+        </p> 
+   </p>
+    <script>
+        
+        (function () {
+                window.addEventListener('load', init )
+
+            function init() {
+                let $paragrafo = document.querySelectorAll('p');
+
+              for (let x = 0; x < $paragrafo.length; x++) {
+                  $paragrafo[x].innerHTML = formatarText($paragrafo[x].innerHTML);
+              }
+
+                function formatarText(txt) {
+                    let arr = txt.split(' ');
+                    console.log(arr);
+                    
+                    if(arr.length > 10){
+                 
+
+                  return arr.slice(0, 10).join(' ') + '...';
+
+                  }
+                  return txt;
+            }
+        }
+        })()
+
+    </script>
+    </div>
+</body>
+</html>

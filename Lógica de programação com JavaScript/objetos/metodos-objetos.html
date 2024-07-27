@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id ="output"></div>
+        <script>
+            let banana = new Object();
+            banana.valor = "R$ 2,00";
+            banana.estoque = 6;
+    
+            let msg = '';
+            banana.comprar = function(qtd){
+                if(!qtd) { // se não for estabelecido uma quantidade então a condição estabelecerá 1.
+                    qtd = 1;
+                }
+
+                this.estoque = this.estoque - qtd;
+                console.log(this.estoque);
+
+            }
+            msg += 'valor = ' + banana.valor + '<br>';
+            msg += 'quantidade = '+ banana.estoque + '<br>';
+    
+            document.querySelector('#output').innerHTML = msg;
+            
+        </script>
+</body>
+</html>

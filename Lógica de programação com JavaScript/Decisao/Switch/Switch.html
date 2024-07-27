@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    var nome = prompt("Digite seu nome");
+    var comprimento = nome.length;
+
+        switch(comprimento){
+            
+            case 1:
+            alert('Olá seu Nome tem 1 Caractere');
+            break;
+
+            case 2:
+            alert('Olá seu Nome tem 2 Caractere');
+            break;
+
+            case 3:
+            alert('Olá seu Nome tem 3 Caractere');
+            break;
+
+            default:
+            alert('Não deu');
+            
+        }
+        var numero = prompt("Digite um numero"); // Repare que o Valor está saindo como String
+
+        switch(numero){
+            case "1":
+                alert('é string');
+            case 1:
+                alert('é numero');
+
+        }
+    </script>
+</body>
+</html>

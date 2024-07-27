@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+    <h2>return</h2>
+    <script>
+        function testeSaltos() {
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+                if (i === 5) {
+                    return // O return saí da função.
+                }                
+            } // o return não deixa a função continuar
+            console.log('Fim da função');
+        }
+        var teste = testeSaltos();
+        console.log(teste);
+    
+    </script>
+
+    <h2>Break</h2>
+<script>
+     function testeSaltos() {
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+                if (i === 5) {
+                    break // O break sai da estrutura do loop, não dá função igual faz o return
+                }                
+            } 
+            console.log('Fim da função');
+       }
+        var teste = testeSaltos();
+        console.log(teste);
+</script>
+
+<script>
+     function testeSaltos() {
+            for (let i = 0; i < 10; i++) {
+               
+                if (i === 5) {
+                   continue; // Ele apenas continua e pula a condição estabelecida na condição.
+                }  
+                console.log(i);              
+            } 
+            console.log('Fim da função');
+       }
+        var teste = testeSaltos();
+        console.log(teste);
+
+
+        //EX Break
+        let n = 10;
+       switch (n) {
+               case 0:
+               console.log('Switch 0');
+               break; 
+
+               case 10:
+               console.log('Switch 10');
+               break;
+
+               case 20:
+               console.log('Switch 20');
+               break;
+
+               case 30:
+               console.log('Switch 30');
+               break;
+
+               default:
+               console.log('Switch default');
+               break;
+                }
+</script>
+
+</body>
+</html>

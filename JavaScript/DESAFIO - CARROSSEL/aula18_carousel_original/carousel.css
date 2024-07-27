@@ -1,0 +1,72 @@
+ .carousel {
+    margin: 1em auto;
+    max-width: 800px;
+    position: relative;
+   /*overflow: scroll;*/
+}
+.carousel__inner {
+    font-size: 0;
+    white-space: nowrap;
+    transition: transform 1s ease;
+}
+.carousel__item {
+    font-size: 1em;
+    display: inline-block;
+    width: auto;
+}
+.carousel__item > img {
+    display: block;
+    max-width: 100%;
+    
+}
+.carousel__btn {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    background: rgba(0,0,0, .5);
+    color: white;
+   /* display: none;*/
+}
+.carousel__btn--prev{
+    left: 0;
+}
+.carousel__btn--next{
+    right: 0;
+}
+
+.carousel__paginacao{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.carousel__paginacao li{
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    display: inline-block;
+
+}
+.carousel__paginacao li:after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: .8;    
+    box-shadow: 0 0 2px black;            
+}
+
+.carousel__paginacao li.atual:after{
+    opacity: 1;
+    background: red;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temporizadores</title>
+    <style>
+        .banner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 0 1000px rgba(0,0,0,.8);
+            padding: 10px;
+            display: none;
+        }
+        .banner__close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+            <div class="banner">
+                <h2>
+                    Colombo
+                </h2>
+                <button class="banner__close">X</button>
+        <p>O Ovo de Colombo é uma famosa[1] metáfora[2] proverbial[3][4][5] do folclore italiano[6] contada em toda a Espanha[7] para referir-se a 
+            soluções muito difíceis de se chegar, mas que quando reveladas mostram-se, paradoxalmente, óbvias e simples.[8][9][10][11][12] e o
+            nome pelo qual ficou conhecido um dispositivo criado por Nikola 
+            Tesla que demonstrava os princípios do motor de indução e do campo magnético rotatório por colocar um ovo de cobre de pé.[13][14][15]</p>
+
+            <p>O Ovo de Colombo é uma famosa[1] metáfora[2] proverbial[3][4][5] do folclore italiano[6] contada em toda a Espanha[7] para referir-se a 
+                    soluções muito difíceis de se chegar, mas que quando reveladas mostram-se, paradoxalmente, óbvias e simples.[8][9][10][11][12] e o
+                    nome pelo qual ficou conhecido um dispositivo criado por Nikola 
+                    Tesla que demonstrava os princípios do motor de indução e do campo magnético rotatório por colocar um ovo de cobre de pé.[13][14][15]</p>
+                    
+        <p>O Ovo de Colombo é uma famosa[1] metáfora[2] proverbial[3][4][5] do folclore italiano[6] contada em toda a Espanha[7] para referir-se a 
+                soluções muito difíceis de se chegar, mas que quando reveladas mostram-se, paradoxalmente, óbvias e simples.[8][9][10][11][12] e o
+                nome pelo qual ficou conhecido um dispositivo criado por Nikola 
+                Tesla que demonstrava os princípios do motor de indução e do campo magnético rotatório por colocar um ovo de cobre de pé.[13][14][15]</p>
+
+
+            </div>
+        <script>
+            (function () {
+                let $banner = document.querySelector('.banner');
+                let $bannerBtn = document.querySelector('.banner__close');
+
+                $bannerBtn.addEventListener('click', escondeBanner);
+                let intervaloEsconde = null;
+                function mostraBanner() {
+                    $banner.style.display = 'block';
+                    intervaloEsconde = setTimeout(escondeBanner, 3000);
+                }
+                function escondeBanner() {
+                    $bannerBtn.removeEventListener('click', escondeBanner);
+                    $banner.parentNode.removeChild($banner);
+                }
+
+                setInterval(mostraBanner, 5000);
+
+              
+            })()
+        </script>
+    </body>
+</html>

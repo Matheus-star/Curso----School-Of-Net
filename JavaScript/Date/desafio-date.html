@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício-Date</title>
+</head>
+<body>
+    <h1>Veja Quanto tempo falta para o seu aniversário</h1>
+    <p>Desafio montar uma função que transforma a data em padrão brasileiro</p>
+    <script>
+        (function(){
+           var data = new Date()
+ 
+           function form(data) {
+               var dia = data.getDate() < 10 ? '0' + data.getDate() : data.getDate();
+
+            var mes = data.getMonth() + 1;
+            mes = mes < 10 ? '0' + mes : mes;
+            return dia + '/' + mes + '/' + data.getFullYear();
+           }
+           console.log(form(data));
+          })()
+
+    </script>
+
+</body>
+</html>

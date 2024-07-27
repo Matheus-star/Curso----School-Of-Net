@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<body>
+    <button onclick="mostrartabuada()">Criar Tabuada</button>
+    <button onclick="limpartabuada()">limpar Tabuada</button>
+    <div  id="output"></div>
+    <script>
+        function mostrartabuada(){
+            alert ("mostrar Tabuada");
+        } mostrartabuada();
+            let output = document.querySelector('#output'); //Para delaclarar Qual ID seá manipulada.
+
+            let mensagem = '';
+
+            for (var i = 0; i<=1001; i++){
+                mensagem += 'i: ' + i + '<br>';
+
+            }
+
+            output.innerHTML = mensagem; 
+
+        function limpartabuada(){
+            alert('limpar Tabuada!?');
+        }
+        limpartabuada();
+    </script>
+</body>
+</html>

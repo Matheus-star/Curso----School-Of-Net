@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Alcool ou gasolina?</h3>
+    <script>
+        var kilometrog = 490;
+        var gasolina = 40;
+        var alcool = 40;
+        var kilometro = 300;
+        
+        var mediag = (kilometrog+gasolina)/3;
+        var media = (kilometro+alcool)/3;
+
+        document.write("<br><br>Resultado Normal<br>" ,
+            "<br>O gasto do caminhão com gasolina ",mediag)
+         document.write("<br> A média com alcool foi:" ,media);
+            
+        document.write( "<br><br>Resultado arredondo<br>" ,
+            "<br> O gasto arredondado da gasolina:",Math.round(mediag));
+        document.write("<br> O gasto do alcool:" ,Math.round(media));
+
+        document.write(
+            "<br><br>Resultado com 2 casas decimais<br>" ,
+            "<br> O gasto do caminhão da gasolina:" ,mediag.toFixed(2));
+        document.write("<br> O gasto do caminhão do alcool" ,media.toFixed(2));
+    </script>
+</body>
+</html>

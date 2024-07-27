@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temporizadores</title>
+    
+      <body>
+            <div id="div"></div>
+        <script>
+            (function(){
+                let data = new Date();
+                let d = document.querySelector('div');
+                function form() {
+                  var hora = data.getHours(); 
+                  let minutos = data.getMinutes(); 
+                  let segundos = data.getSeconds();
+          
+                  return hora + ' : ' + minutos + ' : ' + segundos;
+                   }
+
+                function mostraRelogio(atual){
+                  return  d.textContent = atual;
+                 }
+
+                 mostraRelogio(form());
+
+                 setInterval(function(){
+                     
+                  mostraRelogio(form());
+                 
+                 }, 1000);
+            
+                 
+            })()
+        </script>
+      
+    </body>
+</html>
+<!--var data = new Date()
+ 
+function form(data) {
+    var dia = data.getDate() < 10 ? '0' + data.getDate() : data.getDate();
+
+ var mes = data.getMonth() + 1;
+ mes = mes < 10 ? '0' + mes : mes;
+ return dia + '/' + mes + '/' + data.getFullYear();
+}
+console.log(form(data));
+})()-->

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<body>
+   
+    <button onclick="soma()"> * </button>
+    <button onclick="subtração()"> - </button>
+    <button onclick="adição()"> + </button>
+    <button onclick="divisão()"> / </button>
+    <div  id="output"></div>
+   <script>
+       //Perguntar para o usuário
+       let n1 = parseFloat(prompt("Insira um número"));
+       printf();
+        
+      
+      
+       function adição(){
+        let n = parseFloat(prompt('digite outro numero'));
+
+            n1 = n + n1;
+            //n1 += n;
+            printf();
+
+       }
+       function subtração(){
+        let n = parseFloat(prompt('digite outro numero'));
+
+            n1 = n1 - n;
+            //n1 -= n;
+            printf();
+
+       }
+       function soma(){
+        let n = parseFloat(prompt('digite outro numero'));
+
+            n1 = n * n1;
+            //n1 *= n;
+            printf();
+
+       }
+        function divisão(){
+        let n = parseFloat(prompt('digite outro numero'));
+
+            n1 = n1 / n;
+            //n1 /= n;
+            printf();
+
+       }   
+       function printf(){
+        let output = document.querySelector("#output");
+        output.innerHTML = n1;
+       }
+       
+   </script>
+</body>
+</html>

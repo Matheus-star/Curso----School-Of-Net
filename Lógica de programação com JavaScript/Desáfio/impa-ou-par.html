@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Impa || Par</title>
+</head>
+<body>
+    <h1>Jogo Impa ou Par</h1>
+
+    <p> um número de 0 a 5 <input type= "number" id="meunumero" min="0" max="5"> </p>
+    <label><input type="radio" name="opcao" value="par" checked>Par</label><br>
+    <label><input type="radio" name="opcao" value="impar">Impar</label><br>
+    <button onclick="jogar()">Jogar</button>
+
+    <script>
+    
+        let ncomputador = '';
+        let njogador = '';
+        let escolha = '';
+
+        function sortear(max) {
+            return Math.floor(Math.random() * max);
+        }
+    
+        function jogar() {
+            njogador = document.querySelector('#meunumero').value;
+            ncomputador = sortear(5);
+            escolha = document.querySelector('input[type="radio"]:checked').value
+            console.log('escolha', escolha);
+            njogador = parseInt(njogador);
+
+             let resul = njogador + ncomputador;
+            console.log("Numero Computador", ncomputador);
+            console.log("Numero Jogador", njogador);
+            
+             let total = (resul % 2 === 0 ) ? 'par' : 'impar';
+
+             verificarResul(total);
+        }
+        function verificarResul(total) {
+            if (escolha === total) {
+                alert("Você ganhou");
+            }else{
+                alert("O computador ganhou");
+            }
+        }
+    </script>
+</body>
+</html>

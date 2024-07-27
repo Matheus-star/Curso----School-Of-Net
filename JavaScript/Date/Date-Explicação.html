@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elemento Date</title>
+</head>
+<body>
+   <script>
+    
+        let minhaData = new Date() 
+
+         console.log(minhaData);
+
+     console.log(minhaData.getDate()); // Mostra o dia em que foi registrado na variavel.
+      
+     console.log(minhaData.getMonth()); // Mostra o mês em que foi registrado na variavel, os meses começa em 0 até 11.
+
+     console.log(minhaData.getYear()); // Mostra o total de anos que já foram gravados.
+
+     console.log(minhaData.getFullYear()); // Mostra o ano em que foi registrado na variavel.
+    
+     console.log(minhaData.getHours()); // Mostra a hora em que foi registrado na variavel.
+    
+     console.log(minhaData.getMinutes());  // Mostra os minutos em que foi registrado na variavel.
+
+     console.log(minhaData.getSeconds());  // Mostra os segundos em que foi registrado na variavel.
+
+     console.log(minhaData.getTime()); // Ele irá mostrar os milisegundos que passaram desde janeiro de 1970.
+
+        const novaData = new Date(); // pode passar parametros de data hora.
+
+         console.log(novaData.setTime(0)); // ele cerá os milisegundos.
+
+     console.log(minhaData.setDate(1)); // define o dia que vc quer passar para a variavel.
+       // Set é para redefinir uma data.
+     console.log(minhaData.setYear());
+
+     console.log(minhaData.setMonth());
+
+     console.log(minhaData.setHours());
+
+     console.log(minhaData.setMinutes());
+     
+     console.log(minhaData.setMilliseconds());
+    
+    </script> 
+</body>
+</html>

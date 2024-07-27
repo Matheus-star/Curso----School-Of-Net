@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lógica de programação</title>
+</head>
+<body>
+    <h1>Manipulação do HTML pelo javascript</h1>
+    <div id="output"></div>
+    <script>
+        
+        let output = document.querySelector('#output'); //Para delaclarar Qual ID seá manipulada.
+
+        let mensagem = '';
+
+        for (var i = 0; i<=1001; i++){
+            mensagem += 'i: ' + i + '<br>';
+
+        }
+
+        output.innerHTML = mensagem;
+    
+    </script>
+</body>
+</html>

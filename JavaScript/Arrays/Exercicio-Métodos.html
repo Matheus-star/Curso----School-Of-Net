@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title>Exercicio</title>
+</head>
+<body>
+    <Script>
+        const numeros = [2,3,4,5,10];    
+        let novoArray = []
+        
+        for (let i = 0; i < numeros.length; i++) {
+             novoArray.push(numeros[i] * 2);
+        }
+        
+      const novoArrayMap = numeros.map(function (numero) {
+            console.log(numero)
+            return numero * 2;
+        })
+
+        const nomes = ['Ayrton', 'Teshima', 'Teste'];
+        const nomesMinusculos = nomes.map(function (nome) {
+            return nome.toLowerCase();
+        })
+        console.log(nomesMinusculos);
+        console.log(nomes);
+
+        const somaReduce = numeros.reduce(function (valorAcumulador, valorArray) {
+            return valorAcumulador + valorArray;
+        },0)
+        console.log(somaReduce);
+        
+        
+    </Script>
+    <script>
+    
+    const pessoas = [
+
+       
+        {
+            nome: 'maira',
+            idade:33
+        },
+        {
+            nome: 'João',
+            idade:40
+        },   
+        {
+            nome: 'matheus',
+            idade: 15
+        },
+        {
+            nome: 'lucas',
+            idade: 14
+        }
+        ]    
+
+   const pessoasAgrupadas = pessoas.reduce(function (valorAcumulador, valorArray) {
+        const propMairOuMenor = valorArray.idade >= 18 ? 
+        'maiores' : 'menores'; 
+
+        valorAcumulador [propMairOuMenor].push(valorArray);
+
+        return valorAcumulador;
+    }, { menores:[], maiores:[]})
+    
+    console.log(pessoasAgrupadas);
+    
+    </script>
+</body>
+</html>
